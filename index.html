@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>寻宝游戏</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-board"><!DOCTYPE html>
+        <html lang="zh">
+        <head>
+            <meta charset="UTF-8">
+            <title>寻宝游戏</title>
+            <link rel="stylesheet" href="styles.css">
+        </head>
+        <body>
+            <div id="game-board">
+                <div id="background" class="background-layer"></div>
+                <div id="temple-container" class="temple-container">
+                    <img id="guard" src="assets/guard.png" alt="守卫" class="game-object">
+                    <img id="treasure" src="assets/treasure.png" alt="宝箱" class="game-object">
+                </div>
+                <img id="player" src="assets/player.png" alt="玩家" class="game-object">
+                <img id="library" src="assets/library.png" alt="图书馆" class="game-object">
+                <img id="key" src="assets/key.png" alt="钥匙" class="game-object" style="display: none;">
+            </div>
+            <audio id="background-music" src="assets/background_music.mp3" autoplay loop></audio>
+            <script>
+                window.onload = function() {
+                    var audio = document.getElementById('background-music');
+                    audio.play().catch(function(error) {
+                        console.warn('自动播放被阻止，但因为是静音的，所以不应该影响用户体验。', error);
+                    });
+                };
+            </script>
+            <script src="script.js"></script>
+        </body>
+        </html>
+        
